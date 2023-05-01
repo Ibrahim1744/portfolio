@@ -1,9 +1,26 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './contact.css'
 import {AiOutlineMail} from 'react-icons/ai'
 import {BsMessenger} from 'react-icons/bs'
 import {BsWhatsapp} from 'react-icons/bs'
+import emailjs from '@emailjs/browser';
+
+
+
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_aurq6h8', 'template_yogm3tc', form.current, '1P9HC03FswJyQqGUz')
+      .then((result) => {
+          console.log(result.text);
+          console.log("message sent");
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
   return (
     <section id='contact'>
       <h5>Get In Touch</h5>
@@ -30,11 +47,11 @@ const Contact = () => {
           </article>
         </div>
         {/* end of contact options */}
-        <form action="">
-          <input type="text" name='name' placeholder='Your Full Name' required />
-          <input type="email" name='email' placeholder='Your Email' required />
-          <textarea name="" id=""  rows="7" required placeholder='Your Message'></textarea>
-          <button type='submit' className='btn btn-primary'>Send A Message</button>
+        <form action="" ref={form} onSubmit={sendEmail}>
+          <input type="text" name="user_name" placeholder='Your Full Name' required />
+          <input type="email" name="from_name" placeholder='Your Email' required />
+          <textarea name="message" id=""  rows="7" required placeholder='Your Message'></textarea>
+          <button type='submit' value="Send" className='btn btn-primary'>Send A Message</button>
         </form>
       </div>
     </section>

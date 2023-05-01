@@ -10,6 +10,14 @@ const Experience = () => {
         <div className="experience__front-end">
           <h3>Front-End Development</h3>
           <div className="experience__content">
+          <article className='experience-details'>
+              <AiFillCheckCircle className='experience__details-icons' />
+              <div>
+                <h4>C++ BASICS</h4>
+                <small className='text-light'>Experience</small>
+              </div>
+            </article>
+            
             <article className='experience-details'>
               <AiFillCheckCircle className='experience__details-icons' />
               <div>
@@ -41,10 +49,38 @@ const Experience = () => {
             </article>
             <article className='experience-details'>
               <AiFillCheckCircle className='experience__details-icons' />
+              <div>
+                <h4>TAILWIND CSS</h4>
+                <small className='text-light'>Experience</small>
+              </div>
+            </article>
+            <article className='experience-details'>
+              <AiFillCheckCircle className='experience__details-icons' />
              <div>
-               <h4>REACT</h4>
+               <h4>REACT & HOOKS</h4>
                <small className='text-light'>Experience</small>
              </div>
+            </article>
+            <article className='experience-details'>
+              <AiFillCheckCircle className='experience__details-icons' />
+              <div>
+                <h4>REACT-REDUX</h4>
+                <small className='text-light'>Experience</small>
+              </div>
+            </article>
+            <article className='experience-details'>
+              <AiFillCheckCircle className='experience__details-icons' />
+              <div>
+                <h4>NEXT.JS</h4>
+                <small className='text-light'>Experience</small>
+              </div>
+            </article>
+            <article className='experience-details'>
+              <AiFillCheckCircle className='experience__details-icons' />
+              <div>
+                <h4>MONGO DB</h4>
+                <small className='text-light'>Experience</small>
+              </div>
             </article>
           </div>
         </div>
@@ -58,12 +94,7 @@ const Experience = () => {
                 <h4>NODE JS</h4>
             </div>
             </article>
-            <article className='experience-details'>
-              <AiFillCheckCircle className='experience__details-icons' />
-            <div>
-                <h4>MONGODB</h4>
-            </div>
-            </article>
+            
             <article className='experience-details'>
               <AiFillCheckCircle className='experience__details-icons' />
               <div>
